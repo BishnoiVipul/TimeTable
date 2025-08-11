@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITD Weekly Timetable - Group 31</title>
+  <style>
+    /* Import a modern font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    :root {
+      --background-color: #1a1a1a;
+      --surface-color: #242424;
+      --primary-accent: #00acc1; /* A nice Teal */
+      --secondary-accent: #ffab40; /* A warm Amber for notes */
+      --text-primary: #f5f5f5;
+      --text-secondary: #b0bec5;
+      --border-color: #373737;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: var(--text-primary);
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .day {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 25px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .day:hover {
+        border-color: var(--primary-accent);
+        transform: translateY(-5px);
+    }
+
+    .day h2 {
+      margin-top: 0;
+      color: var(--primary-accent);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .slot {
+      background-color: transparent;
+      margin: 15px 0;
+      padding: 15px;
+      border: none;
+      border-left: 3px solid var(--primary-accent);
+      transition: background-color 0.3s ease;
+    }
+    
+    .slot:hover {
+        background-color: rgba(0, 172, 193, 0.1);
+    }
+
+    .slot p {
+      margin: 0;
+      line-height: 1.6;
+    }
+    
+    .slot p:first-child {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    
+    .slot p:last-child {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+    }
+
+    .note {
+      background-color: rgba(255, 171, 64, 0.05);
+      border-left: 3px solid var(--secondary-accent);
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .note a {
+        color: var(--secondary-accent);
+        font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--text-secondary);
+      margin-top: 50px;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    footer a {
+      color: var(--primary-accent);
+    }
+
+    /* Insta Badge Styling */
+    .insta-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--surface-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      padding: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .insta-badge img {
+      width: 100%;
+      height: 100%;
+      /* Invert colors to make the logo white/light on a dark theme */
+      filter: invert(95%) sepia(8%) saturate(95%) hue-rotate(180deg) brightness(85%) contrast(100%);
+    }
+
+    .insta-badge:hover {
+      transform: scale(1.1) rotate(15deg);
+      background: var(--primary-accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Group 31’s IIT Delhi Weekly Timetable</h1>
+    <div class="note">
+      📅 For academic holidays, refer to official IITD announcements.<br>
+      ⚠️ Some days may follow unusual schedules. Always check your email for updates.
+    </div>
+
+    <div class="day">
+      <h2>Monday</h2>
+      <div class="slot"><p>PYL1001 Lecture</p><p>08:00–09:00 @ LH512</p></div>
+      <div class="slot"><p>PYL1001 Tutorial</p><p>13:00–14:00 @ LH413.4</p></div>
+      <div class="slot"><p>MTL1001 Tutorial</p><p>14:00–15:00 @ LH413.1</p></div>
+      <div class="slot"><p>ELL1000 Lecture</p><p>16:00–17:00 @ LH108</p></div>
+    </div>
+
+    <div class="day">
+      <h2>Tuesday</h2>
+      <div class="note">🧪 Remember to check PYP lab partners and experiment details.</div>
+      <div class="slot"><p>PYP Lab</p><p>09:00–13:00 @ LH302</p></div>
+      <div class="note">📌 Check PDF for COL1000 lecture and lab instructions.</div>
+      <div class="slot"><p>COL1000 Lecture</p><p>15:00–16:00 @ LH108</p></div>
+      <div class="slot"><p>MTL1001 Lecture</p><p>16:00–17:00 @ LH308</p></div>
+    </div>
+
+    <div class="day">
+      <h2>Wednesday</h2>
+      <div class="slot"><p>ELL1000 Lab</p><p>09:00–11:00 @ LH402</p></div>
+      <div class="slot"><p>DAN1100 Life Skills</p><p>11:00–12:00 @ IV LT1, IV LT2 (Tentative)</p></div>
+      <div class="note">📨 Follow Life Skills schedule as per respective mails.</div>
+      <div class="slot"><p>COL1000 Lecture</p><p>15:00–16:00 @ LH108</p></div>
+      <div class="slot"><p>MTL1001 Lecture</p><p>16:00–17:00 @ LH308</p></div>
+    </div>
+
+    <div class="day">
+      <h2>Thursday</h2>
+      <div class="slot"><p>PYL1001 Lecture</p><p>08:00–09:00 @ LH512</p></div>
+      <div class="slot"><p>ELL1000 Lecture</p><p>16:00–17:00 @ LH108</p></div>
+    </div>
+
+    <div class="day">
+      <h2>Friday</h2>
+      <div class="slot"><p>COL1000 Lab</p><p>09:00–11:00 @ LH504</p></div>
+      <div class="slot"><p>ELL1000 Tutorial</p><p>14:00–15:00 @ LH606</p></div>
+      <div class="slot"><p>COL1000 Lecture</p><p>15:00–16:00 @ LH108</p></div>
+      <div class="slot"><p>MTL1001 Lecture</p><p>16:00–17:00 @ LH308</p></div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Vipul Bishnoi &mdash; All Rights Reserved.</p>
+      <p>Designed with precision and purpose at <strong>IIT Delhi</strong>.</p>
+    </footer>
+  </div>
+
+  <a href="https://instagram.com/vipulbishnoi_17" target="_blank" class="insta-badge" title="Follow @vipulbishnoi_17 on Instagram">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+  </a>
+</body>
+</html>
